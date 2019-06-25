@@ -31,3 +31,8 @@ Edit `setup-webhook.rb` to specify `WEBHOOK_ADDRESS`.
 ```
 bundle exec ruby setup-webhook.rb
 ```
+
+
+## Test
+
+Send sms to the phone number you used in `setup-webhook.rb`. And watch the console output of `my-website.rb`.
