@@ -2,6 +2,10 @@ require 'sinatra'
 
 post '/' do
     status 200
-    headers('Validation-Token' => request.env['HTTP_VALIDATION_TOKEN']) if request.env['HTTP_VALIDATION_TOKEN'] 
+    headers('Validation-Token' => request.env['HTTP_VALIDATION_TOKEN']) if request.env['HTTP_VALIDATION_TOKEN']
+    request.body.rewind
+    body = request.body.read
+    puts body
+    # do whatever with body
     body 'OK'
 end
